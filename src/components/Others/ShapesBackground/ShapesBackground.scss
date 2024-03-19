@@ -1,0 +1,68 @@
+$shapes: 'triangle', '.circle','.square', '.cross';
+$rotation: random(360);
+$speed: random(5)+5;
+
+.shapes-container, .shape {
+    height: 100px;
+    width: 100px;
+}
+
+.shapes-container {
+    animation: movement-x 7.8s linear infinite alternate;
+    background-color: red;
+    position: absolute;
+    z-index: 0; //set other front element z-index to 1
+}
+
+.shape {
+    
+    animation-name: shape, movement-y;
+    animation-duration: 2s,  10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal, alternate;
+    animation-timing-function: linear;
+}
+
+.triangle {
+    border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid rgba(85,85,85,0.5);
+    height: 0px;
+    width: 0px;
+}
+
+.shape::after {
+    position: absolute;
+    top: 7px;
+    left: -20px;
+    content: "";
+    border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 80px solid rgba(255,255,255,0.5);
+}
+
+
+
+@keyframes shape {
+    0% {
+        transform: translate3d(0,0,0) rotate(#{$rotation + 0}deg);
+    }
+    100% {
+        transform: translate3d(0,0,0) rotate(#{$rotation + 360}deg);
+    }
+}
+
+@keyframes movement-x {
+    100% {
+        transform: translateX( calc(100vw - 100px));
+        
+    }
+}
+
+@keyframes movement-y {
+    100% {
+        transform: translateY( calc(4000px - 100px));
+    }
+}
+
+//ADD ANIMATIONS AND RANDOM SHAPE PARTICLE GENERATOR

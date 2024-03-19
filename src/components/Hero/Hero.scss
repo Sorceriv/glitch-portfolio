@@ -1,0 +1,58 @@
+.hero-section {
+    //background-color: black;
+    display: flex;
+    color: white;
+    padding: 30px 0px 200px 0px;
+    margin: auto;
+    max-width: var(--max-width);
+    //min-width: var(--max-width);
+    //justify-content: space-between;
+    
+    .header-section-1 {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 500px;
+        height: 500px;
+        //background-color: yellow;
+        .header-title {
+            .header-title-name {
+                font-size: 100px;
+                font-weight: 900;
+                display: grid;
+                grid-template-columns: 1fr;
+                --stacks: 3;
+                color: #DF1F2D;
+                span {
+                    grid-row-start: 1;
+                    grid-column-start: 1;
+                    font-size: 4rem;
+                    --stack-height: calc(100% / var(--stacks) - 1px);
+                    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+                    --clip-top: calc(var(--stack-height) * var(--index));
+                    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+                    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+                    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 1s alternate-reverse;
+                }
+
+                span:nth-child(odd) { --glitch-translate: 15px; }
+                span:nth-child(even) { --glitch-translate: -15px; }
+            }
+        }
+        .hero-button {
+            border: 3px solid white;    
+            //background-color: red;
+            padding: 25px;
+            text-align: center;
+        }
+    }
+    .header-section-2 {
+        margin-left: auto;
+        .header-image {
+            width: 500px;
+            height: 500px;
+            //background-color: red;   
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.projects-container {
+    overflow-x: scroll;
+    position: relative; //Need to set position relative for position absolute to work inside scroll
+    max-height: 1400px;
+    height: 1400px;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 50px 0px;
+    //background-color: wheat;
+    max-width: var(--max-width);
+    margin: auto;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    //background-color: var(--bg-color);
+    color: white;
+    //border-left: 1px solid rgba(255,255,255,0.5);
+    scroll-behavior: smooth;
+
+    .project-title {
+        font-size: 200px;
+        font-weight: 900;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        //border-left: 1px solid rgba(255,255,255,0.5);
+        
+    }
+    
+    .projects {
+        display: flex;
+        flex-direction: column;
+        //background-color: green;
+        .project-container {
+            display: flex;
+            width: 100%;
+        
+            position: relative;
+            margin-top: 150px;
+            //background-color: green;
+            span {
+
+                //background-color: red;
+                transform: scale(-1, -1);
+                margin: 0;
+                padding: 0;
+                writing-mode: vertical-rl;
+                
+            }
+            a {
+                margin-left: auto;
+                width: 100%;
+                background-color: grey;
+                height: 500px;
+            }
+            
+        }
+    }
+}
+.projects-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.projects-container::-webkit-scrollbar-track {
+    
+}
+
+/* Handle */
+.projects-container::-webkit-scrollbar-thumb {
+    //border-radius: 10px;
+    background: #DF1F2D;;
+}
