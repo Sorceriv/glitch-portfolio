@@ -31,14 +31,14 @@ function Skills() {
                     <div className="background-1"></div>
                     <div className="background-2"></div>
                     <div className="skills-title-1">
-                        {/* <img src={software} style={{'--index': '0'}} alt="SOFTWARE"/>
+                        <img src={software} style={{'--index': '0'}} alt="SOFTWARE"/>
                         <img src={software} style={{'--index': '1'}} alt="SOFTWARE"/>
-                        <img src={software} style={{'--index': '2'}} alt="SOFTWARE"/> */}
+                        <img src={software} style={{'--index': '2'}} alt="SOFTWARE"/>
                     </div>
                     <div className="skills-title-2">
-                        {/* <img src={engineering} style={{'--index': '0'}} alt="ENGINEERING"/>
+                        <img src={engineering} style={{'--index': '0'}} alt="ENGINEERING"/>
                         <img src={engineering} style={{'--index': '1'}} alt="ENGINEERING"/>
-                        <img src={engineering} style={{'--index': '2'}} alt="ENGINEERING"/> */}
+                        <img src={engineering} style={{'--index': '2'}} alt="ENGINEERING"/>
                     </div>
                 </div>
                 <div className="sub-container-1">
