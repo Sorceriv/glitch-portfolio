@@ -9,9 +9,9 @@ function Hero() {
                     <div className="header-title">
                         Hi! My name is...
                         <div className="header-title-name">
-                            <span style={{'--index?': '0'}}>Eduardo Villanueva</span>
-                            <span style={{'--index?': '1'}}>Eduardo Villanueva</span>
-                            <span style={{'--index?': '2'}}>Eduardo Villanueva</span>
+                            <span style={{'--index': '0'}}>Eduardo Villanueva</span>
+                            <span style={{'--index': '1'}}>Eduardo Villanueva</span>
+                            <span style={{'--index': '2'}}>Eduardo Villanueva</span>
                         </div>
                         
                     </div>
