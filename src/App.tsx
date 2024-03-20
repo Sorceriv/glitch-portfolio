@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 import './App.scss';
 
 import ShapesBackground from "./components/Others/ShapesBackground/ShapesBackground";
@@ -21,6 +22,7 @@ function App() {
       {/*<div className="background-color-1">*/}
         <Projects/>
       {/*</div>*/}
+      <Contact/>
     </>
     
   )
